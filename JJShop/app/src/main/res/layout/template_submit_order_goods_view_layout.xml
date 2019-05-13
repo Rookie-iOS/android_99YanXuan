@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jjshop.template_view.TemplateSubmitOrderGoodsView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/template_submit_order_goods"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="10dp">
+
+    <ImageView android:id="@+id/m_iv_img"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"/>
+    <!--标题-->
+    <TextView android:id="@+id/m_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="@color/color_1b1b1b"
+        android:layout_alignTop="@+id/m_iv_img"
+        android:layout_toRightOf="@+id/m_iv_img"
+        android:layout_marginRight="10dp"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+    <!--规格-->
+    <TextView android:id="@+id/m_tv_guige"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:textColor="@color/color_8a8c8f"
+        android:layout_toRightOf="@+id/m_iv_img"
+        android:layout_toLeftOf="@+id/layout_num"
+        android:layout_below="@+id/m_tv_title"
+        android:layout_marginRight="10dp"
+        android:includeFontPadding="false"
+        android:layout_marginTop="5dp"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+    <!--数量-->
+
+    <TextView android:id="@+id/m_tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_1b1b1b"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/m_tv_title"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:text="1"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/m_iv_img"
+        android:layout_toRightOf="@+id/m_iv_img"
+        android:layout_marginRight="10dp">
+        <TextView
+            android:id="@+id/m_tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/color_d6004f"/>
+
+        <TextView
+            android:id="@+id/m_tv_old_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_8a8c8f"/>
+    </LinearLayout>
+
+    <!--限时标识-->
+    <TextView
+        android:id="@+id/m_tv_rush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:background="@color/color_fbe9e9"
+        android:layout_below="@+id/m_iv_img"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/m_iv_img"
+        android:textColor="@color/color_d6004f"
+        android:includeFontPadding="false"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"/>
+
+    <!--不再配送区域-->
+    <TextView
+        android:id="@+id/m_tv_buzai_peisong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:background="@color/color_fbe9e9"
+        android:layout_below="@+id/m_tv_rush"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/m_iv_img"
+        android:textColor="@color/color_d6004f"
+        android:includeFontPadding="false"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="1dp"
+        android:text="您的收货区域不配送"
+        android:paddingBottom="1dp"/>
+
+    <View android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_ededed"
+        android:layout_below="@+id/m_tv_buzai_peisong"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/m_tv_all_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:includeFontPadding="false"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/view_line"
+        android:textColor="@color/color_d6004f"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="小计："
+        android:textSize="15sp"
+        android:includeFontPadding="false"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/view_line"
+        android:layout_toLeftOf="@+id/m_tv_all_price"
+        android:textColor="@color/color_333333"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_ededed"/>
+
+</com.jjshop.template_view.TemplateSubmitOrderGoodsView>

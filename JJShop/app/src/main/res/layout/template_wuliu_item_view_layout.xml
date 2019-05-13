@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jjshop.template_view.TemplateWuliuItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/template_wuliu_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/white">
+
+    <TextView android:id="@+id/m_tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_666666"/>
+
+    <TextView android:id="@+id/m_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="@color/color_666666"
+        android:layout_alignRight="@+id/m_tv_date"
+        android:layout_below="@+id/m_tv_date"
+        android:includeFontPadding="false"
+        android:layout_marginTop="2dp"/>
+
+    <ImageView android:id="@+id/m_iv_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@+id/m_tv_date"
+        android:layout_alignTop="@+id/m_tv_date"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_ededed"
+        android:layout_alignLeft="@+id/m_iv_icon"
+        android:layout_alignBottom="@+id/m_tv_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/m_iv_icon"/>
+
+    <TextView android:id="@+id/m_tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="@color/color_666666"
+        android:layout_toRightOf="@+id/m_iv_icon"
+        android:layout_alignTop="@+id/m_iv_icon"
+        android:paddingBottom="40dp"/>
+
+</com.jjshop.template_view.TemplateWuliuItemView>

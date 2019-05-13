@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include
+        android:id="@+id/layout_top"
+        layout="@layout/include_title_layout"/>
+
+    <TextView android:id="@+id/m_tv_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="@color/color_666666"
+        android:layout_below="@+id/layout_top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:text="历史记录"/>
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/m_search_flow"
+        zhy:max_select="1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:layout_below="@+id/m_tv_search_history"/>
+
+    <TextView android:id="@+id/m_tv_clear_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="@color/color_666666"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="@drawable/yuanjiao_bg_white_frame_cecece_select"
+        android:layout_below="@+id/m_search_flow"
+        android:text="清除历史记录"/>
+
+    <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+        android:id="@+id/search_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_top"
+        android:visibility="gone"/>
+
+    <include android:id="@+id/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/include_loading_empty_error_layout"
+        android:layout_below="@+id/layout_top"/>
+</RelativeLayout>

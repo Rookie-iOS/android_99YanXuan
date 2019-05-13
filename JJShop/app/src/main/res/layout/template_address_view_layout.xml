@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jjshop.template_view.TemplateAddressView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/template_address"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View android:id="@+id/view_line_top"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/bg"/>
+    <TextView android:id="@+id/temp_tv_address_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/color_1b1b1b"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_below="@+id/view_line_top"
+        android:text="张三"/>
+
+    <TextView android:id="@+id/temp_tv_address_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/color_1b1b1b"
+        android:layout_marginTop="17dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/view_line_top"
+        android:layout_marginRight="17dp"
+        android:text="13222221234"/>
+
+    <TextView android:id="@+id/temp_tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/color_1b1b1b"
+        android:layout_marginTop="13dp"
+        android:drawablePadding="5dp"
+        android:layout_marginLeft="17dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/temp_tv_address_name"
+        android:layout_marginBottom="17dp"
+        android:layout_marginRight="30dp"
+        android:drawableLeft="@mipmap/img_submit_order_address_icon"
+        android:text="北京海淀区号地块撒谎的扩散"/>
+
+    <View android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_ededed"
+        android:layout_below="@+id/temp_tv_address"
+        android:layout_marginTop="17dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
+        android:layout_below="@+id/view_line">
+
+        <ImageView  android:id="@+id/temp_iv_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:src="@mipmap/img_cart_check_false"/>
+
+        <TextView android:id="@+id/temp_tv_default"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_1b1b1b"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/temp_iv_default"
+            android:paddingLeft="5dp"
+            android:layout_centerVertical="true"
+            android:text="设为默认"/>
+
+        <TextView android:id="@+id/temp_tv_edit"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/temp_tv_del"
+            android:background="@drawable/yuanjiao_bg_white_frame_cecece_select"
+            android:layout_marginRight="10dp"
+            android:text="编辑"/>
+
+        <TextView android:id="@+id/temp_tv_del"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/yuanjiao_bg_white_frame_cecece_select"
+            android:text="删除"/>
+    </RelativeLayout>
+
+</com.jjshop.template_view.TemplateAddressView>

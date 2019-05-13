@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_above="@+id/m_tv_close">
+        <TextView android:id="@+id/tv_quan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:text="优惠券"/>
+
+        <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+            android:id="@+id/m_recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_below="@+id/tv_quan"/>
+
+    </RelativeLayout>
+
+    <TextView android:id="@+id/m_tv_close"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="@color/white"
+        android:background="@color/color_d6004f"
+        android:layout_alignParentBottom="true"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text="关闭"/>
+
+</RelativeLayout>

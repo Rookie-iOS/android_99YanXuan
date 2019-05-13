@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jjshop.template_view.TemplateCartLikeView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/template_cart_like"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:paddingTop="10dp">
+    <TextView android:id="@+id/m_tv_like"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:visibility="gone"
+        android:paddingBottom="10dp"
+        android:textColor="@color/color_8a8c8f"
+        android:text="——   你可能还喜欢   ——"
+        android:layout_marginBottom="10dp"/>
+    <LinearLayout android:id="@+id/m_layout_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/m_tv_like"
+        android:orientation="vertical">
+
+    </LinearLayout>
+    <LinearLayout android:id="@+id/m_layout_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/m_tv_like"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+</com.jjshop.template_view.TemplateCartLikeView>

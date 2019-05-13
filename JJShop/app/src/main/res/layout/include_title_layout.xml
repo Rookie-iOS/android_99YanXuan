@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height"
+    android:background="@color/white">
+    <!--左边的返回-->
+    <ImageView android:id="@+id/m_title_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/i_ar_leftback"
+        android:paddingRight="10dp"
+        android:layout_centerVertical="true"/>
+
+    <TextView android:id="@+id/m_tv_msg_num"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_alignRight="@+id/m_title_back"
+        android:layout_alignTop="@+id/m_title_back"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="3dp"
+        android:visibility="gone"
+        android:background="@drawable/shape_msg_circle"/>
+    <!--中间的标题-->
+    <TextView android:id="@+id/m_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:textColor="@color/color_333333"
+        android:layout_centerInParent="true"/>
+    <!--中间的搜索-->
+    <LinearLayout android:id="@+id/m_title_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/m_title_back"
+        android:layout_toLeftOf="@+id/m_title_right_tv"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_search_bar"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/search_main"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="visible"/>
+        <EditText android:id="@+id/m_edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="text"
+            android:hint="请输入关键字搜索商品"
+            android:textSize="16dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <!--右边的搜索-->
+    <TextView android:id="@+id/m_title_right_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="16sp"
+        android:textColor="@color/color_333333"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:visibility="gone"
+        android:text="搜索"/>
+    <!--右边的搜索-->
+    <ImageView
+        android:id="@+id/m_title_right_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:src="@mipmap/search_main"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_ededed"/>
+</RelativeLayout>

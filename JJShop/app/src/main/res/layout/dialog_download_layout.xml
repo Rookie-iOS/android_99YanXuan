@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--升级提示布局-->
+    <LinearLayout android:id="@+id/m_layout_update"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="143dp"
+            android:src="@mipmap/img_download_dialog_bg"
+            android:scaleType="fitXY"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:background="@drawable/download_yuanjiao_white_select">
+            <!--标题-->
+            <TextView android:id="@+id/m_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <!--更新的内容显示-->
+            <TextView android:id="@+id/m_tv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/color_484848"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/m_tv_title"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="17dp"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@mipmap/img_download_dialog_content_icon"
+                android:layout_marginTop="14dp"/>
+            <!--单选框-->
+            <CheckBox android:id="@+id/m_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不再提示"
+                android:textSize="11sp"
+                android:textColor="@color/color_666666"
+                android:button="@null"
+                android:drawableLeft="@drawable/download_check_btn_selecter"
+                android:layout_below="@+id/m_tv_info"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="30dp"
+                android:drawablePadding="5dp"
+                />
+            <!--左边按钮-->
+            <TextView android:id="@+id/m_tv_left"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:textSize="16dp"
+                android:textColor="@color/color_666666"
+                android:gravity="center"
+                android:background="@drawable/download_left_btn_select"
+                android:layout_below="@+id/m_checkBox"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:text="稍后再说"/>
+            <!--右边按钮-->
+            <TextView android:id="@+id/m_tv_right"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@color/color_ff133e"
+                android:layout_below="@+id/m_checkBox"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:text="立即升级"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!--下载中显示的布局-->
+    <LinearLayout android:id="@+id/m_layout_download"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="46dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/img_download_loading_bg"/>
+            <!--标题-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="新版本下载中"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <!--进度相关-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/download_yuanjiao_white_select"
+            android:paddingBottom="18dp">
+            <!--进度条-->
+            <ProgressBar android:id="@+id/m_progress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:max="100"
+                android:progressDrawable="@drawable/download_apk_progress_bg"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="33dp"
+                android:layout_marginRight="33dp"/>
+            <!--显示当前下载进度-->
+            <TextView android:id="@+id/m_tv_pro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/m_progress"
+                android:layout_alignRight="@+id/m_progress"
+                android:textSize="13sp"
+                android:textColor="@color/color_e4003c"/>
+            <!--下载的提示语-->
+            <TextView android:id="@+id/m_tv_woanload_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:textColor="@color/color_666666"
+                android:text="新版本正在更新请稍后..."
+                android:layout_below="@+id/m_progress"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!--左边按钮-->
+            <TextView android:id="@+id/m_tv_loading_left"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:textSize="16dp"
+                android:textColor="@color/color_666666"
+                android:gravity="center"
+                android:background="@drawable/download_left_btn_select"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/m_tv_woanload_msg"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"
+                android:text="稍后再说"/>
+
+            <!--右边按钮-->
+            <TextView android:id="@+id/m_tv_loading_right"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:visibility="gone"
+                android:background="@color/color_ff133e"
+                android:layout_below="@+id/m_tv_woanload_msg"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:text="重新下载"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!--打开未知来源权限页面-->
+    <RelativeLayout android:id="@+id/m_layout_permission"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:visibility="gone"
+        android:background="@drawable/yuanjiao_white_select">
+        <TextView android:id="@+id/tv_permission_ts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/color_333333"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="提示"/>
+
+        <TextView android:id="@+id/tv_permission_tv_ocntent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/color_333333"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_permission_ts"
+            android:layout_marginTop="20dp"
+            android:text="安装应用需要打开未知来源权限，请去设置中开启权限"/>
+
+        <TextView android:id="@+id/m_tv_set_permission"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="16dp"
+            android:textColor="@color/color_2897d4"
+            android:gravity="center"
+            android:background="@drawable/download_left_btn_select"
+            android:layout_below="@+id/tv_permission_tv_ocntent"
+            android:layout_marginTop="20dp"
+            android:text="去设置"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

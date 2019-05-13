@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--地址-->
+    <RelativeLayout android:id="@+id/m_layout_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="7dp">
+        <TextView android:id="@+id/m_tv_address_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_marginTop="17dp"/>
+
+        <TextView android:id="@+id/m_tv_address_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_marginTop="17dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"/>
+
+        <TextView android:id="@+id/m_tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_marginTop="13dp"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/m_tv_address_name"
+            android:layout_marginBottom="17dp"
+            android:layout_marginRight="30dp"
+            android:drawableLeft="@mipmap/img_submit_order_address_icon"/>
+
+        <ImageView android:id="@+id/iv_address_jiantou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_jiantou_right_block"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+        <TextView android:id="@+id/m_tv_go_selelct_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_1b1b1b"
+            android:textSize="15sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_centerInParent="true"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/img_submit_order_address_icon"
+            android:visibility="gone"
+            android:text="您当前还没有地址，赶快去添加吧"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/img_submit_order_address_bottom"/>
+    </RelativeLayout>
+
+    <!--微信支付-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="7dp">
+        <TextView
+            android:id="@+id/weixin_pay_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/img_submit_order_wx_icon"
+            android:gravity="center_vertical"
+            android:drawablePadding="5dp"
+            android:text="微信"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_cart_check_true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_ededed"/>
+
+    <!--余额支付-->
+    <RelativeLayout
+        android:id="@+id/balance_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/balance_pay_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/icon_yue"
+            android:gravity="center_vertical"
+            android:drawablePadding="5dp"
+            android:text="可用余额"/>
+
+        <ImageView
+
+            android:id="@+id/balance_pay_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_off"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_ededed"/>
+    <!--配送方式-->
+    <!--<RelativeLayout android:id="@+id/m_layout_peisong"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/white">-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textColor="@color/color_1b1b1b"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:layout_marginBottom="15dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:drawableLeft="@mipmap/img_submit_order_peisong_icon"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:drawablePadding="5dp"-->
+            <!--android:text="配送方式"/>-->
+
+        <!--<TextView android:id="@+id/m_tv_peisong_price"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textColor="@color/color_1b1b1b"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="10dp"/>-->
+    <!--</RelativeLayout>-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_ededed"/>
+
+    <!--优惠券-->
+    <RelativeLayout android:id="@+id/m_layout_discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <TextView android:id="@+id/tv_dis_quan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/img_submit_order_discount_icon"
+            android:gravity="center_vertical"
+            android:drawablePadding="5dp"
+            android:text="优惠券"/>
+
+        <TextView android:id="@+id/m_tv_discount_quan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:gravity="right"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_toRightOf="@+id/tv_dis_quan"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/m_iv_discount_jiantou"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView android:id="@+id/m_iv_discount_jiantou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_jiantou_right_block"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+</merge>

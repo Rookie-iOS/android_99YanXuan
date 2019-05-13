@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jjshop.template_view.TemplateDiscountQuanView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/template_discount_quan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <RelativeLayout android:id="@+id/layout_quan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/yuanjiao_fff1f1_select">
+        <TextView android:id="@+id/m_tv_quan_price"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/color_f23030"
+            android:layout_marginTop="20dp"/>
+
+        <TextView android:id="@+id/m_tv_manjian"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/color_f23030"
+            android:layout_below="@+id/m_tv_quan_price"
+            android:layout_marginTop="5dp"/>
+
+        <TextView android:id="@+id/m_tv_quan_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@+id/m_tv_quan_price"
+            android:layout_marginLeft="25dp"
+            android:textColor="@color/color_f23030"/>
+
+        <TextView android:id="@+id/m_tv_quan_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/view_line_shu"
+            android:layout_below="@+id/m_tv_quan_name"
+            android:textColor="@color/color_f23030"/>
+
+        <ImageView android:id="@+id/view_line_heng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/view_line_shu"
+            android:layout_below="@+id/m_tv_quan_time"
+            android:layout_marginTop="7dp"
+            android:scaleType="fitXY"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/img_discount_quan_line_heng"/>
+
+        <TextView android:id="@+id/m_tv_detail_guize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_toRightOf="@+id/view_line_shu"
+            android:layout_below="@+id/view_line_heng"
+            android:paddingTop="7dp"
+            android:paddingRight="10dp"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingBottom="23dp"
+            android:includeFontPadding="false"
+            android:drawableRight="@mipmap/img_discount_quan_details_icon"
+            android:textColor="@color/color_d0a8a8"
+            android:text="详情信息"/>
+
+        <TextView android:id="@+id/m_tv_detail_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/color_f23030"
+            android:layout_below="@+id/view_line_shu"
+            android:layout_toRightOf="@+id/view_line_shu"
+            android:layout_marginTop="-10dp"
+            android:includeFontPadding="false"
+            android:visibility="gone"
+            android:paddingBottom="20dp"/>
+
+        <ImageView android:id="@+id/tv_yuan_top"
+            android:layout_width="20dp"
+            android:layout_height="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/m_tv_quan_price"
+            android:src="@mipmap/img_quan_cirle_bottom"/>
+
+        <ImageView android:id="@+id/view_line_shu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/m_tv_quan_price"
+            android:layout_below="@+id/tv_yuan_top"
+            android:layout_alignBottom="@+id/m_tv_detail_guize"
+            android:scaleType="fitXY"
+            android:paddingTop="10dp"
+            android:paddingLeft="9.5dp"
+            android:paddingRight="9.5dp"
+            android:layout_marginBottom="20dp"
+            android:src="@mipmap/img_discount_quan_line_shu"/>
+
+        <ImageView android:id="@+id/tv_yuan_bottom"
+            android:layout_width="20dp"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/m_tv_quan_price"
+            android:src="@mipmap/img_quan_cirle_top"/>
+
+        <ImageView android:id="@+id/m_iv_quan_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</com.jjshop.template_view.TemplateDiscountQuanView>

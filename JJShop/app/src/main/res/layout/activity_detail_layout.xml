@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+    <FrameLayout android:id="@+id/m_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+    <RelativeLayout android:id="@+id/m_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <View android:id="@+id/m_view_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/m_view_status">
+            <ImageView
+                android:id="@+id/image_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_ar_left"
+                />
+            <TextView android:id="@+id/m_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/default_bg"
+                android:layout_centerInParent="true"
+                android:text="商品详情"/>
+            <ImageView
+                android:id="@+id/image_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_share"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

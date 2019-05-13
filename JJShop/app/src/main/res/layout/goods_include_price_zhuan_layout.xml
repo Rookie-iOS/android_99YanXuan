@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--现价-->
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:layout_centerVertical="true"
+        android:textColor="@color/color_1b1b1b"/>
+
+    <TextView android:id="@+id/xiegang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/color_8c8c8c"
+        android:layout_toRightOf="@+id/price"
+        android:layout_centerVertical="true"
+        android:includeFontPadding="false"
+        android:text=" / "/>
+    <!--赚-->
+    <TextView
+        android:id="@+id/earn_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/color_d6004f"
+        android:includeFontPadding="false"
+        android:layout_toRightOf="@+id/xiegang"
+        android:layout_centerVertical="true"/>
+</merge>

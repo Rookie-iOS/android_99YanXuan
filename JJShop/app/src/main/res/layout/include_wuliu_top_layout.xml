@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/bg"/>
+
+    <TextView android:id="@+id/m_tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="@color/color_333333"
+        android:layout_marginTop="7dp"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/m_tv_address_name"
+        android:paddingTop="17dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="17dp"
+        android:drawableLeft="@mipmap/img_submit_order_address_icon"/>
+
+</LinearLayout>

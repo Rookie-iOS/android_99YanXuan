@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+    <View android:id="@+id/m_view_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"/>
+
+    <include
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_below="@+id/m_view_status"
+        layout="@layout/include_title_layout"/>
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:id="@+id/m_refresh"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/layout_top"-->
+        <!--android:layout_above="@id/layout_bottom"-->
+        <!--&gt;-->
+        <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+            android:id="@+id/m_recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout_top"
+            android:layout_above="@id/layout_bottom"/>
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+    <RelativeLayout android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout android:id="@+id/m_layout_check"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:orientation="horizontal">
+            <CheckBox android:id="@+id/m_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:enabled="false"
+                android:button="@drawable/download_check_btn_selecter"
+                android:layout_below="@+id/m_tv_info"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/color_333333"
+                android:text="全选"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/m_tv_buy"
+            android:layout_toRightOf="@+id/m_layout_check"
+            android:gravity="center"
+            android:paddingLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:orientation="vertical">
+            <TextView android:id="@+id/m_tv_discount_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/color_d6004f"
+                android:visibility="gone"
+                android:text="优惠:￥0"/>
+
+            <TextView android:id="@+id/m_tv_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/color_d6004f"
+                android:text="总计:￥0"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/m_tv_buy"
+            android:layout_width="123dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_d6004f"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:text="去结算"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_ededed"/>
+    </RelativeLayout>
+
+    <include android:id="@+id/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/include_loading_empty_error_layout"
+        android:layout_below="@+id/layout_top"/>
+
+
+</RelativeLayout>

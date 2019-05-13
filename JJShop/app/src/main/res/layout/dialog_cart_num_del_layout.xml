@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/yuanjiao_white_select"
+    >
+
+    <TextView android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/color_1b1b1b"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:text="修改购买数量"/>
+
+    <TextView android:id="@+id/m_tv_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/color_333333"
+        android:text="确认要退出登录吗？"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:paddingBottom="20dp"/>
+
+    <EditText android:id="@+id/m_edit_num"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+        android:textColor="@color/color_1b1b1b"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="20dp"
+        android:lines="1"
+        android:maxLength="3"
+        android:inputType="number"
+        android:background="@drawable/yuanjiao_bg_white_frame_cecece_select"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_ededed"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView android:id="@+id/m_tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:textColor="@color/color_1b1b1b"
+            android:gravity="center"
+            android:text="取消"/>
+        <TextView android:id="@+id/m_tv_sure"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/cart_update_dialog_sure_select"
+            android:text="确定"/>
+    </LinearLayout>
+</LinearLayout>

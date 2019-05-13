@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jjshop.template_view.TemplateGoodsLikeView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/template_goods_like"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <ImageView
+        android:id="@+id/cell_gridimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/cell_gridgoodname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textSize="15dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/cell_gridimage"
+        android:layout_alignLeft="@+id/cell_gridimage"
+        android:layout_alignRight="@+id/cell_gridimage"/>
+
+        <TextView
+            android:id="@+id/cell_gridgoodoriginprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_d6004f"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@+id/cell_gridgoodname"
+            android:layout_marginLeft="5dp"
+            android:includeFontPadding="false"
+            android:gravity="bottom"
+            android:textSize="18dp"
+            />
+        <TextView
+            android:id="@+id/cell_gridgoodlastprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_8a8c8f"
+            android:layout_alignBottom="@+id/cell_gridgoodoriginprice"
+            android:layout_toRightOf="@+id/cell_gridgoodoriginprice"
+            android:textSize="13dp"
+            android:gravity="top"
+            android:layout_marginLeft="10dp" />
+</com.jjshop.template_view.TemplateGoodsLikeView>

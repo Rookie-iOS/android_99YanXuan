@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jjshop.template_view.TemplateGoodsView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/template_goods"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/bg">
+    <View android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:background="@color/bg"
+        android:layout_height="10dp"></View>
+    <RelativeLayout android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line"
+        android:padding="0.5dp"
+        android:background="@drawable/download_left_btn_select">
+
+        <!--商品图片-->
+        <ImageView
+            android:id="@+id/good_img"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+        <!--标题-->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:gravity="left"
+            android:layout_below="@+id/good_img"
+            android:singleLine="true"
+            android:textColor="@color/color_1b1b1b"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:layout_below="@+id/title">
+            <include layout="@layout/goods_include_price_zhuan_layout"/>
+            <!--分享-->
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="分享"
+                android:drawablePadding="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:drawableLeft="@drawable/share"
+                android:textSize="13sp"
+                android:background="@drawable/shape_small_label"
+                android:textColor="@color/color_8c8c8c"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.jjshop.template_view.TemplateGoodsView>

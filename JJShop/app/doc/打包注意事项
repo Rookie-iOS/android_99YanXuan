@@ -1,0 +1,8 @@
+1、修改版本号
+    1.1、修改AndroidManifest.xml中JJ_VERSION的版本号
+    1.2、修改build.gradle中的versionName版本号，versionCode需要在原基础上 +1
+2、关闭Log
+    2.1 关闭JJShopApplication的OkHttp的log（注释addInterceptor（）方法）
+    2.2 关闭build.gradle中的LOG_DEBUG  为false
+3、关闭小能客服的debuglog
+4、修改bugly的版本号、debug

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto">
+
+    <View android:id="@+id/view_touming"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+    <!--顶部-->
+    <RelativeLayout android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/view_touming">
+        <TextView android:id="@+id/m_tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/color_d6004f"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="5dp"
+            android:includeFontPadding="false"/>
+
+        <TextView android:id="@+id/m_tv_select_guige"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_marginLeft="100dp"
+            android:layout_below="@+id/m_tv_price"
+            android:layout_marginTop="5dp"/>
+        <ImageView android:id="@+id/m_iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="25dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="5dp"
+            android:src="@mipmap/img_goods_info_guige_close"/>
+    </RelativeLayout>
+
+    <!--图片-->
+    <ImageView android:id="@+id/m_iv_goods"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/white"
+        android:padding="2dp"
+        android:src="@drawable/img_default_zhijiao"/>
+
+    <!--中间的规格、数量-->
+    <ScrollView android:id="@+id/m_layout_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_top"
+        android:background="@color/white"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            <TextView android:id="@+id/m_tv_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/color_1b1b1b"/>
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/m_color_flow"
+                zhy:max_select="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/m_tv_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_1b1b1b"/>
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/m_size_flow"
+                zhy:max_select="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ededed"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+                <TextView android:id="@+id/tv_buynum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/color_1b1b1b"
+                    android:layout_centerVertical="true"
+                    android:text="购买数量"/>
+
+                <TextView
+                    android:id="@+id/m_tv_xian_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/color_d6004f"
+                    android:layout_toRightOf="@+id/tv_buynum"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:text="每人限购1件"/>
+
+                <ImageView android:id="@+id/m_tv_del"
+                    android:layout_width="40dp"
+                    android:layout_height="38dp"
+                    android:src="@mipmap/img_shop_car_del"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/m_tv_num"/>
+
+                <EditText android:id="@+id/m_tv_num"
+                    android:layout_width="40dp"
+                    android:layout_height="36dp"
+                    android:textColor="@color/color_1b1b1b"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/color_f4f4f4"
+                    android:layout_toLeftOf="@+id/m_tv_add"
+                    android:text="1"/>
+
+                <ImageView android:id="@+id/m_tv_add"
+                    android:layout_width="40dp"
+                    android:layout_height="38dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/img_shop_car_add"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="90dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--底部-->
+    <LinearLayout android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+        <TextView android:id="@+id/m_tv_add_cart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="@color/color_FF8400"
+            android:text="加入购物车"/>
+        <TextView android:id="@+id/m_tv_buy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@color/color_d6004f"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="立即购买"/>
+    </LinearLayout>
+
+    <!--活动开始时间倒计时-->
+    <LinearLayout android:id="@+id/m_ll_bottom_djs"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/img_goods_info_rush_bg"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+        <TextView android:id="@+id/m_tv_bottom_djs_tishi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/white"/>
+
+        <TextView android:id="@+id/m_tv_bottom_djs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</RelativeLayout>

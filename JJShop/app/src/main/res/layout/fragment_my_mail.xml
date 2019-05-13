@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+    <com.jjshop.widget.MyScrollView
+        android:id="@+id/m_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/shop_include_top_layout"/>
+
+            <include layout="@layout/shop_include_center_layout"/>
+
+            <!--邀请开店、我的培训师-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:layout_marginTop="7dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+                <LinearLayout android:id="@+id/m_layout_yqkd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/img_shop_yqkd"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/my_shop_text_size"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/color_1b1b1b"
+                        android:text="邀请开店"/>
+                </LinearLayout>
+                <View android:layout_width="0.5dp"
+                    android:layout_height="24dp"
+                    android:background="@color/color_ededed"/>
+                <LinearLayout android:id="@+id/m_layout_wdpxs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/img_shop_my_pxs"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/my_shop_text_size"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/color_1b1b1b"
+                        android:text="我的培训师"/>
+                </LinearLayout>
+            </LinearLayout>
+            <include layout="@layout/shop_include_order_layout"/>
+
+            <include layout="@layout/shop_include_bottom_layout"/>
+
+        </LinearLayout>
+    </com.jjshop.widget.MyScrollView>
+
+    <RelativeLayout android:id="@+id/m_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_d82953">
+        <ImageView android:id="@+id/m_iv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="15dp"
+            android:src="@mipmap/img_shop_msg_white"/>
+
+        <TextView android:id="@+id/m_tv_msg_num"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_toRightOf="@+id/m_iv_msg"
+            android:layout_alignTop="@+id/m_iv_msg"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginTop="13dp"
+            android:visibility="gone"
+            android:background="@drawable/shape_msg_circle"/>
+
+        <ImageView android:id="@+id/m_iv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/img_rush_share"/>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/layout_error"
+        layout="@layout/include_loading_empty_error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp" />
+
+</RelativeLayout>

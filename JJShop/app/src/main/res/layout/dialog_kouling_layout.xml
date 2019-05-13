@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toast_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yuanjiao_white_select"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerInParent="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+
+        <!--标题-->
+        <TextView android:id="@+id/m_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="99口令"/>
+
+        <View android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/m_tv_title"
+            android:background="@color/color_ededed"/>
+
+        <!--关闭按钮-->
+        <ImageView android:id="@+id/m_iv_close"
+            android:layout_width="39dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:visibility="gone"
+            android:src="@mipmap/img_goods_info_guige_close"/>
+
+        <!--商品、活动图片-->
+        <ImageView android:id="@+id/m_iv_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/view_line"/>
+
+        <!--商品、活动名称-->
+        <TextView android:id="@+id/m_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_marginRight="15dp"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:textColor="@color/color_333333"
+            android:layout_alignTop="@+id/m_iv_img"
+            android:layout_toRightOf="@+id/m_iv_img"/>
+
+        <!--立即查看按钮-->
+        <TextView android:id="@+id/m_tv_look"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:background="@color/color_d6004f"
+            android:gravity="center"
+            android:layout_below="@+id/m_iv_img"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:text="立即查看"/>
+
+        <!--加载中-->
+        <include
+            android:id="@+id/m_layout_loading"
+            layout="@layout/include_loading_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/m_iv_img"
+            android:layout_alignBottom="@+id/m_iv_img"
+            android:layout_centerHorizontal="true"/>
+
+        <!--加载网络错误提示-->
+        <TextView android:id="@+id/m_tv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:textColor="@color/color_666666"
+            android:layout_alignTop="@+id/m_iv_img"
+            android:layout_alignBottom="@+id/m_iv_img"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:text="网络不稳定，请稍后再试"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

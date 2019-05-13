@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jjshop.template_view.TemplateErrorView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_network_error"
+        />
+    <TextView android:id="@+id/m_tv_error_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_999999"
+        android:textSize="18sp"
+        android:text="网络请求失败"/>
+    <TextView android:id="@+id/m_tv_error_tishi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_999999"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:text="点击按钮重新加载"/>
+    <TextView android:id="@+id/m_tv_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_333333"
+        android:textSize="15sp"
+        android:text="重新加载"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/download_left_btn_select"/>
+
+
+</com.jjshop.template_view.TemplateErrorView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jjshop.template_view.TemplateWuliuTopView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/template_1012"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <ImageView android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/img_line_xu_icon"/>
+
+    <TextView android:id="@+id/m_tv_kd_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/view_line"
+        android:textColor="@color/color_333333"/>
+
+    <TextView android:id="@+id/m_tv_kd_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/m_tv_kd_name"
+        android:textColor="@color/color_333333"
+        android:paddingBottom="20dp"/>
+
+</com.jjshop.template_view.TemplateWuliuTopView>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="accent">#d70051</color>
+    <color name="font_high">#333333</color>
+    <color name="white">#FFFFFF</color>
+    <color name="apla_color">#00000000</color>
+    <color name="bule">#32a7d2</color>
+    <color name="light_gray">#9a9a9a</color>
+    <color name="primary">#FF03A9F4</color>
+    <color name="primary_dark">#FF0288D1</color>
+    <color name="status_bar_color">@color/primary_dark</color>
+    <color name="none_color">#00000000</color>
+    <color name="darkblue">#2b2c3b</color>
+    <color name="black">#000000</color>
+    <color name="share_gray">#666666</color>
+    <color name="red">#e0413e</color>
+    <color name="darksteelgray">#373950</color>
+    <color name="gray_title_bg">#f0f0f0</color>
+    <color name="Green">#0F0</color>
+    <color name="lightgray">#cccccc</color>
+    <color name="gray">#333333</color>
+    <color name="blue">#96b2d2</color>
+    <color name="half_trans">#40000000</color>
+    <color name="_trans">#00ffffff</color>
+    <drawable name="background">#eeeeee</drawable>
+    <color name="login_btn">#C8C8C8</color>
+    <color name="getcode">#FF9C00</color>
+    <color name="darkgrey">#9fabad</color>
+    <color name="bg">#F6F6F6</color>
+    <color name="lightgrays">#C8C8C8</color>
+    <color name="darkgray">#222222</color>
+    <color name="brand_back">#f2f2f2</color>
+    <color name="more_light_gray">#f5f5f5</color>
+    <color name="search_edit_gray">#ffcccccc</color>
+    <!-- 首页 -->
+    <color name="textbackwhite_main">#f7dad9</color>
+    <color name="textblack">#333333</color>
+    <color name="textblue">#96b2d2</color>
+    <color name="textgray">#cccccc</color>
+    <color name="backgray">#eeeeee</color>
+    <!-- 侧边栏颜色 -->
+    <color name="slidingback">#363a50</color>
+    <color name="slidingnameshadow">#28293a</color>
+    <color name="slidingfacecircle">#2b2c3b</color>
+    <color name="slidingtext">#9b9ca7</color>
+    <color name="sliding_selector">#313345</color>
+    <!-- 我的关注页面 -->
+    <color name="attentionback">#ebebeb</color>
+    <!-- 设置 -->
+    <color name="setting_line">#e1e1e1</color>
+    <!-- 评论 -->
+    <color name="comment_okay">#999999</color>
+    <color name="textpink">#fbe9e9</color>
+    <!-- 透明背景 -->
+    <color name="transparent">#00000000</color>
+    <color name="night_mask">#90000000</color>
+    //夜间模式
+    <color name="night_windows_bg">#1f1f1f</color>
+    <color name="night_colorPrimaryDark">#992A28</color>
+    <color name="night_title_Dark">#464646 </color>
+    <color name="night_list_text">#8F8F8F</color>
+    <color name="night_listitem_default">#292929</color>
+    <color name="night_lisitem_click">#222222</color>
+    <color name="night_listitem_line">#353535</color>
+    <color name="night_font_color">#666666</color>
+    <color name="night_font_bg_color">#222222</color>
+    <color name="night_line_color">#111111</color>
+    <color name="night_bg_color">#000000</color>
+    <color name="night_bg_editebox">#333333</color>
+    <color name="night_main_title_color">#999999</color>
+    <color name="night_sub_title_color">#666666</color>
+    //日间模式
+    <color name="day_windows_bg">#fafafa</color>
+    <color name="day_colorPrimary">@color/red</color>
+    <color name="detail_commentlayout_bg">#F8F8F8</color>
+    <color name="login_line">#dcdcdc</color>
+    <!-- popupwindow bg  -->
+    <color name="pop_window_color">#f3f3f3</color>
+    <color name="default_bg">#00ffffff</color>
+    <color name="default_status">#ffffffff</color>
+
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_484848">#484848</color>
+    <color name="color_ff133e">#ff133e</color>
+    <color name="color_fe0848">#fe0848</color>
+    <color name="color_ebebeb">#ebebeb</color>
+    <color name="color_e4003c">#e4003c</color>
+    <color name="color_d4382b">#d4382b</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_f8bdbf">#f8bdbf</color>
+    <color name="color_3c3b44">#3c3b44</color>
+    <color name="color_ff0000">#ff0000</color>
+    <color name="color_f0f0f0">#F0F0F0</color>
+    <color name="color_80333333">#80333333</color>
+    <color name="color_cecece">#cecece</color>
+    <color name="color_2897D3">#2897D3</color>
+    <color name="color_1b1b1b">#1b1b1b</color>
+    <color name="color_21b7f1">#21b7f1</color>
+    <color name="color_50cf12">#50cf12</color>
+    <color name="color_fa735c">#fa735c</color>
+    <color name="color_ededed">#ededed</color>
+    <color name="color_8a8c8f">#8a8c8f</color>
+    <color name="color_d9135c">#d9135c</color>
+    <color name="color_d82953">#D82953</color>
+    <color name="color_f4f4f4">#f4f4f4</color>
+    <color name="color_fbe9e9">#fbe9e9</color>
+    <color name="color_2897d4">#2897d4</color>
+    <color name="color_d6004f">#d6004f</color>
+    <color name="color_f6f6f6">#F6F6F6</color>
+    <color name="color_8c8c8c">#8c8c8c</color>
+    <color name="color_FF8400">#FF8400</color>
+    <color name="color_f0f2f5">#f0f2f5</color>
+    <color name="color_fff1f1">#fff1f1</color>
+    <color name="color_f23030">#f23030</color>
+    <color name="color_d0a8a8">#d0a8a8</color>
+    <color name="color_fff0e9">#fff0e9</color>
+    <color name="color_f52d26">#f52d26</color>
+    <color name="color_f33838">#f33838</color>
+    <color name="color_ffc48d">#ffc48d</color>
+    <color name="color_eb8bad">#eb8bad</color>
+    <color name="color_1d96d7">#1d96d7</color>
+    <color name="color_f2f2f2">#f2f2f2</color>
+    <color name="color_3f964a">#3f964a</color>
+    <color name="color_ff4b4d">#ff4b4d</color>
+    <color name="color_bababa">#bababa</color>
+    <color name="color_dddddd">#DDDDDD</color>
+
+    <!--Color.argb((int) 255, 255, 255, 255)-->
+    <!--第一个参数是透明度 255：不透明    0：透明-->
+    <!--后面三个参数是颜色 255：白色      0：黑色-->
+
+    <!--100%	00-->
+    <!--99%	03-->
+    <!--98%	05-->
+    <!--97%	07-->
+    <!--96%	0A-->
+    <!--95%	0D-->
+    <!--94%	0F-->
+    <!--93%	12-->
+    <!--92%	14-->
+    <!--91%	17-->
+    <!--90%	1A-->
+    <!--89%	1C-->
+    <!--88%	1E-->
+    <!--87%	21-->
+    <!--86%	24-->
+    <!--85%	26-->
+    <!--84%	29-->
+    <!--83%	2B-->
+    <!--82%	2E-->
+    <!--81%	30-->
+    <!--80%	33-->
+    <!--79%	36-->
+    <!--78%	38-->
+    <!--77%	3B-->
+    <!--76%	3D-->
+    <!--75%	40-->
+    <!--74%	42-->
+    <!--73%	45-->
+    <!--72%	47-->
+    <!--71%	4A-->
+    <!--70%	4D-->
+    <!--69%	4F-->
+    <!--68%	52-->
+    <!--67%	54-->
+    <!--66%	57-->
+    <!--65%	59-->
+    <!--64%	5C-->
+    <!--63%	5E-->
+    <!--62%	61-->
+    <!--61%	63-->
+    <!--60%	66-->
+    <!--59%	69-->
+    <!--58%	6B-->
+    <!--57%	6E-->
+    <!--56%	70-->
+    <!--55%	73-->
+    <!--54%	75-->
+    <!--53%	78-->
+    <!--52%	7A-->
+    <!--51%	7D-->
+    <!--50%	80-->
+    <!--49%	82-->
+    <!--48%	85-->
+    <!--47%	87-->
+    <!--46%	8A-->
+    <!--45%	8C-->
+    <!--44%	8F-->
+    <!--43%	91-->
+    <!--42%	94-->
+    <!--41%	96-->
+    <!--40%	99-->
+    <!--39%	9C-->
+    <!--38%	9E-->
+    <!--37%	A1-->
+    <!--36%	A3-->
+    <!--35%	A6-->
+    <!--34%	A8-->
+    <!--33%	AB-->
+    <!--32%	AD-->
+    <!--31%	B0-->
+    <!--30%	B3-->
+    <!--29%	B5-->
+    <!--28%	B8-->
+    <!--27%	BA-->
+    <!--26%	BD-->
+    <!--25%	BF-->
+    <!--24%	C2-->
+    <!--23%	C4-->
+    <!--22%	C7-->
+    <!--21%	C9-->
+    <!--20%	CC-->
+    <!--19%	CF-->
+    <!--18%	D1-->
+    <!--17%	D4-->
+    <!--16%	D6-->
+    <!--15%	D9-->
+    <!--14%	DB-->
+    <!--13%	DE-->
+    <!--12%	E0-->
+    <!--11%	E3-->
+    <!--10%	E6-->
+    <!--9   %	E8-->
+    <!--8   %	EB-->
+    <!--7   %	ED-->
+    <!--6   %	F0-->
+    <!--5   %	F2-->
+    <!--4   %	F5-->
+    <!--3   %	F7-->
+    <!--2   %	FA-->
+    <!--1   %	FC-->
+    <!--0   %	FF-->
+</resources>

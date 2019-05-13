@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--订单管理-->
+    <RelativeLayout android:id="@+id/m_layout_ddgl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:layout_marginTop="7dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+        <TextView android:id="@+id/m_tv_order_guanli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/my_shop_text_size"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_centerVertical="true"
+            android:text="订单管理"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/my_shop_text_size"
+            android:textColor="@color/color_8a8c8f"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@mipmap/img_jiantou_right_block"
+            android:gravity="center_vertical"
+            android:drawablePadding="5dp"
+            android:text="全部订单"/>
+
+    </RelativeLayout>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_ededed"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+        <!--待付款-->
+        <RelativeLayout android:id="@+id/m_layout_dfk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:layout_weight="1">
+            <ImageView android:id="@+id/iv_dfk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/img_shop_dfk"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/my_shop_text_size"
+                android:textColor="@color/color_8a8c8f"
+                android:layout_below="@+id/iv_dfk"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="待付款"/>
+            <TextView android:id="@+id/m_tv_dfk_num"
+                style="@style/cirle_num_style"
+                android:layout_toRightOf="@+id/iv_dfk"
+                android:layout_alignTop="@+id/iv_dfk"
+                android:layout_marginLeft="-8dp"/>
+        </RelativeLayout>
+        <!--待发货-->
+        <RelativeLayout android:id="@+id/m_layout_dfh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:layout_weight="1">
+            <ImageView android:id="@+id/iv_dfh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/img_shop_dfh"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/my_shop_text_size"
+                android:textColor="@color/color_8a8c8f"
+                android:layout_below="@+id/iv_dfh"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="待发货"/>
+            <TextView android:id="@+id/m_tv_dfh_num"
+                style="@style/cirle_num_style"
+                android:layout_toRightOf="@+id/iv_dfh"
+                android:layout_alignTop="@+id/iv_dfh"
+                android:layout_marginLeft="-8dp"/>
+        </RelativeLayout>
+        <!--待收货-->
+        <RelativeLayout android:id="@+id/m_layout_dsh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:layout_weight="1">
+            <ImageView android:id="@+id/iv_dsh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/img_shop_dsh"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/my_shop_text_size"
+                android:textColor="@color/color_8a8c8f"
+                android:layout_below="@+id/iv_dsh"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="待收货"/>
+            <TextView android:id="@+id/m_tv_dsh_num"
+                style="@style/cirle_num_style"
+                android:layout_toRightOf="@+id/iv_dsh"
+                android:layout_alignTop="@+id/iv_dsh"
+                android:layout_marginLeft="-8dp"/>
+        </RelativeLayout>
+        <!--售后、退款-->
+        <RelativeLayout android:id="@+id/m_layout_shtk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:layout_weight="1">
+            <ImageView android:id="@+id/iv_shtk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/img_shop_shtk"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/my_shop_text_size"
+                android:textColor="@color/color_8a8c8f"
+                android:layout_below="@+id/iv_shtk"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="售后/退款"/>
+            <TextView android:id="@+id/m_tv_shtk_num"
+                style="@style/cirle_num_style"
+                android:layout_toRightOf="@+id/iv_shtk"
+                android:layout_alignTop="@+id/iv_shtk"
+                android:layout_marginLeft="-8dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <!--广告位-->
+    <ImageView android:id="@+id/m_iv_details_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+</merge>

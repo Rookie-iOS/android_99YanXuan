@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+    <include
+        android:id="@+id/layout_top"
+        layout="@layout/include_title_layout"/>
+
+    <View android:id="@+id/line_one"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/bg"
+        android:layout_below="@+id/layout_top"/>
+
+    <EditText android:id="@+id/m_edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="16sp"
+        android:layout_below="@+id/line_one"
+        android:maxLength="8"
+        android:textColor="@color/color_1b1b1b"
+        android:textColorHint="@color/color_8a8c8f"
+        android:hint="请输入收货人姓名"/>
+
+    <View android:id="@+id/view_line_one"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/m_edit_name"
+        android:background="@color/color_ededed"/>
+
+    <EditText android:id="@+id/m_edit_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="16sp"
+        android:layout_below="@+id/view_line_one"
+        android:lines="1"
+        android:inputType="number"
+        android:maxLength="11"
+        android:ellipsize="end"
+        android:textColor="@color/color_1b1b1b"
+        android:textColorHint="@color/color_8a8c8f"
+        android:hint="请输入手机号码"/>
+
+    <View android:id="@+id/view_line_two"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/m_edit_mobile"
+        android:background="@color/color_ededed"/>
+
+    <TextView android:id="@+id/m_tv_city"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/view_line_two"
+        android:paddingLeft="15dp"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@mipmap/img_jiantou_right_block"
+        android:drawablePadding="5dp"
+        android:paddingRight="15dp"
+        android:textSize="16sp"
+        android:textColor="@color/color_1b1b1b"
+        android:text="请选择省、市、区"/>
+
+    <View android:id="@+id/view_line_three"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/m_tv_city"
+        android:background="@color/color_ededed"/>
+
+    <EditText android:id="@+id/m_edit_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="left"
+        android:padding="15dp"
+        android:textSize="16sp"
+        android:layout_below="@+id/view_line_three"
+        android:lines="5"
+        android:textColor="@color/color_1b1b1b"
+        android:textColorHint="@color/color_8a8c8f"
+        android:hint="请输入详细地址（5-120个字）"/>
+
+    <View android:id="@+id/view_line_four"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/m_edit_address"
+        android:background="@color/color_ededed"/>
+
+    <RelativeLayout android:id="@+id/m_layout_default"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:layout_below="@+id/view_line_four"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textColor="@color/color_1b1b1b"
+            android:text="设为默认地址"/>
+
+        <ImageView android:id="@+id/m_iv_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_cart_check_true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <View android:id="@+id/line_two"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/bg"
+        android:layout_below="@+id/m_layout_default"/>
+    <LinearLayout android:id="@+id/layout_save"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/line_two"
+        android:paddingRight="15dp">
+        <TextView android:id="@+id/m_tv_save_address"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/yuanjiao_2897d3_select"
+            android:gravity="center"
+            android:text="保存地址"/>
+    </LinearLayout>
+
+    <include android:id="@+id/m_view_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/layout_top"
+        layout="@layout/include_loading_layout"/>
+
+
+</RelativeLayout>

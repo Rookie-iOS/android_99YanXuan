@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jjshop.template_view.TemplateBannerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/template_banner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!--轮播-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/m_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--小点-->
+    <LinearLayout android:id="@+id/m_point"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/m_viewpager"
+        android:layout_alignLeft="@+id/m_viewpager"
+        android:layout_alignRight="@+id/m_viewpager"
+        >
+
+    </LinearLayout>
+
+</com.jjshop.template_view.TemplateBannerView>

@@ -1,0 +1,147 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.jjshop"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 21
+        versionName "1.3.4"
+        multiDexEnabled true
+
+        ndk {
+            abiFilters "armeabi"
+        }
+    }
+
+    allprojects {
+        repositories {
+            mavenCentral()
+            maven { url 'https://www.jitpack.io' }
+            maven {url 'http://developer.huawei.com/repo/'}
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'jjdancekey'
+            keyPassword 'jjdance'
+            storeFile file('../app/jjdancekey.jks')
+            storePassword 'jjdance'
+        }
+        debug {
+        }
+    }
+
+    buildTypes {
+        release {
+            // 混淆
+            minifyEnabled true
+            // 混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            // Zipalign优化
+            zipAlignEnabled true
+            // Log的显示、隐藏
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            // 接口域名，true 代表正式   false代表测试
+            buildConfigField "boolean", "IS_RELEASE", "true"
+            // 签名
+            signingConfig signingConfigs.release
+            // 打包
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def fileName = "99严选_${variant.versionName}_${variant.productFlavors[0].name}.apk"
+                    def outFile = output.outputFile
+                    if (outFile != null && outFile.name.endsWith('.apk')) {
+                        outputFileName = fileName
+                    }
+                }
+            }
+        }
+        debug {
+            // 混淆
+            minifyEnabled false
+            // 混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            // Log的显示、隐藏
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            // 接口域名，true 代表正式   false代表测试
+            buildConfigField "boolean", "IS_RELEASE", "true"
+            // 签名
+            signingConfig signingConfigs.release
+        }
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [JJ_CHANNEL_VALUE: name]
+    }
+
+    flavorDimensions "JJshop"
+    productFlavors {
+        CSJJ0001 {dimension "JJshop"} // 测试
+        YX99JJ0001 {dimension "JJshop"} // 严选后台
+        YYBJJ00001 {dimension "JJshop"}// 应用宝
+        JJ36000001 {dimension "JJshop"}// 360
+        XMJJ00001 {dimension "JJshop"}// 小米
+        HWJJ00001 {dimension "JJshop"}// 华为
+        OPPOJJ00001 {dimension "JJshop"}// OPPO
+        VIVOJJ00001 {dimension "JJshop"}// VIVO
+        LXJJ00001 {dimension "JJshop"}// 联想
+//        SXJJ00001 {dimension "JJshop"}// 三星
+        MZJJ00001 {dimension "JJshop"}// meizu
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api 'com.android.support:appcompat-v7:27.1.1'
+    api 'com.android.support:design:27.1.1'
+    // 沉浸式
+    api 'com.gyf.barlibrary:barlibrary:2.3.0'
+    // 微信
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    //注意：统计SDK必须依赖基础组件库。所以需要加入对应依赖:
+    api 'com.umeng.sdk:common:latest.integration'
+    api 'com.umeng.sdk:analytics:latest.integration'
+    //网络
+    api 'com.zhy:okhttputils:2.6.2'
+    // 首页分类Tab
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.6@aar'
+    // 图片加载
+    api 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    // 注解
+    api 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    // eventBus
+    api 'org.greenrobot:eventbus:3.1.1'
+    // gson解析
+    api 'com.google.code.gson:gson:2.8.5'
+    // recycleeview 带加载更多
+    api 'com.yanzhenjie:recyclerview-swipe:1.1.4'
+    // 最基础的架构，仅提供了系统默认的图片选择器和拍照功能
+    api 'com.github.qingmei2:rximagepicker:2.2.0'
+    // 底部弹框
+    api 'com.contrarywind:Android-PickerView:4.1.6'
+    // 流式布局
+    api 'com.hyman:flowlayout-lib:1.1.2'
+    // 小能客服
+    api project(':xiaonengChatUI')
+    // 解决65536
+    api 'com.android.support:multidex:1.0.1'
+    // bugly
+    api 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
+    // 视频播放
+    api 'cn.jzvd:jiaozivideoplayer:6.4.0'
+    // 数据库
+    api 'org.litepal.android:java:3.0.0'
+    // 二维码
+    implementation 'com.google.zxing:core:3.3.0'
+}

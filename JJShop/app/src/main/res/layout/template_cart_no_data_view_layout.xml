@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jjshop.template_view.TemplateCartNoDataView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:paddingBottom="70dp">
+    <ImageView android:id="@+id/iv_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_cart_no_data"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"/>
+    <TextView android:id="@+id/tv_nodate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="13dp"
+        android:textColor="@color/color_8a8c8f"
+        android:layout_below="@+id/iv_img"
+        android:text="购物车为空,快去看看吧"/>
+
+    <TextView android:id="@+id/m_tv_go_shopping"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/color_1b1b1b"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/yuanjiao_bg_white_frame_cecece_select"
+        android:layout_below="@+id/tv_nodate"
+        android:text="去逛逛"/>
+
+</com.jjshop.template_view.TemplateCartNoDataView>

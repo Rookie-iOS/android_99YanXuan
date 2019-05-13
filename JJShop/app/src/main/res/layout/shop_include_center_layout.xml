@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:gravity="bottom">
+        <!--今日订单-->
+        <LinearLayout android:id="@+id/m_layout_today_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/img_shop_today_order"/>
+
+            <TextView android:id="@+id/m_tv_today_order_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/my_shop_text_size"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/color_21b7f1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/my_shop_text_size"
+                android:textColor="@color/color_1b1b1b"
+                android:text="今日订单(笔)"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="24dp"
+            android:background="@color/color_ededed"
+            android:layout_marginBottom="10dp"/>
+
+        <!--今日销售-->
+        <LinearLayout android:id="@+id/m_layout_today_sale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/img_shop_today_sale"/>
+            <TextView android:id="@+id/m_tv_today_sale_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/my_shop_text_size"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/color_fa735c"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/my_shop_text_size"
+                android:textColor="@color/color_1b1b1b"
+                android:text="今日销售(元)"
+                />
+        </LinearLayout>
+        
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="24dp"
+            android:background="@color/color_ededed"
+            android:layout_marginBottom="10dp"/>
+
+        <!--本月销售-->
+        <LinearLayout android:id="@+id/m_layout_month_sale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/img_shop_month_sale"/>
+            <TextView android:id="@+id/m_tv_month_sale_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/my_shop_text_size"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/color_50cf12"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/my_shop_text_size"
+                android:textColor="@color/color_1b1b1b"
+                android:text="本月销售(元)"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</merge>

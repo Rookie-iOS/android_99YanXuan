@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jjshop.template_view.TemplateAfterSaleListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/template_after_sale_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="10dp">
+    <View android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/bg"/>
+    <!--订单编号-->
+    <TextView android:id="@+id/m_tv_order_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:padding="10dp"
+        android:textColor="@color/color_333333"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/view_line"/>
+
+    <View android:id="@+id/view_line_one"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_ededed"
+        android:layout_below="@+id/m_tv_order_no"/>
+
+    <LinearLayout android:id="@+id/m_layout_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/view_line_one"
+        android:paddingBottom="10dp">
+
+    </LinearLayout>
+
+    <TextView android:id="@+id/m_tv_order_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_999999"
+        android:textSize="15dp"
+        android:layout_below="@+id/m_layout_goods"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+
+    <TextView android:id="@+id/m_tv_look_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:textColor="@color/color_333333"
+        android:background="@drawable/yuanjiao_bg_white_frame_cecece_select"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/m_tv_order_status"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="5dp"
+        android:text="查看详情"/>
+
+
+</com.jjshop.template_view.TemplateAfterSaleListView>

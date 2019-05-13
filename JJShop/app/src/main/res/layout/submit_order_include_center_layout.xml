@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/color_1b1b1b"
+        android:layout_marginTop="7dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:background="@color/white"
+        android:text="订单信息"/>
+
+    <com.jjshop.widget.MyListView
+        android:id="@+id/m_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:divider="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_marginTop="7dp">
+        <EditText android:id="@+id/m_et_liuyan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/color_1b1b1b"
+            android:textColorHint="@color/color_8a8c8f"
+            android:padding="10dp"
+            android:maxLength="200"
+            android:background="@drawable/yuanjiao_f0f2f5_select"
+            android:hint="给卖家留言200字以内（选填）"/>
+    </RelativeLayout>
+
+    <!--总额、运费、优惠-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp">
+
+        <!--商品总额-->
+        <TextView android:id="@+id/tv_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_marginTop="15dp"
+            android:text="商品总额:"/>
+
+        <TextView android:id="@+id/m_tv_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:text="¥100"/>
+
+        <!--运费-->
+        <TextView android:id="@+id/tv_yun_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/tv_total_price"
+            android:text="运费:"/>
+
+        <TextView android:id="@+id/m_tv_yun_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_below="@+id/tv_total_price"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:text="¥100"/>
+
+        <!--优惠抵扣-->
+        <TextView android:id="@+id/tv_discount_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/tv_yun_price"
+            android:text="优惠抵扣:"/>
+
+        <TextView android:id="@+id/m_tv_discount_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_below="@+id/tv_yun_price"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:text="¥100"/>
+
+        <!--余额抵扣-->
+        <TextView android:id="@+id/balance_discount_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/tv_discount_price"
+            android:text="余额抵扣:"/>
+
+        <TextView android:id="@+id/m_balance_discount_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/color_1b1b1b"
+            android:layout_below="@+id/m_tv_discount_price"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:text="¥0"/>
+
+        <View android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/balance_discount_price"
+            android:layout_marginTop="15dp"
+            android:background="@color/color_ededed"/>
+
+        <TextView android:id="@+id/m_tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/color_d6004f"
+            android:layout_below="@+id/view_line"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginTop="13dp"
+            android:text="¥100"/>
+    </RelativeLayout>
+
+</merge>
